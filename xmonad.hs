@@ -8,6 +8,7 @@ main = xmonad $ defaultConfig {
     terminal	= "urxvtc"
   , modMask	= mod4Mask
   , workspaces	= map show ['1'..'9']
+  , mouseBindings = myMouseBindings
 }
 
 myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
