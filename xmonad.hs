@@ -17,7 +17,7 @@ main = xmonad $ defaultConfig {
 
 myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm, button1), mouseGesture gestures)
-    , ((modm, button2), (\w -> focus w >> windows W.shiftMaster))
+    , ((modm, button2), (\w -> focus w >> mouseMoveWindow w))
     , ((modm, button3), (\w -> focus w >> mouseResizeWindow w
                                        >> windows W.shiftMaster))
     , ((modm, button4), \x -> windows W.swapUp)
